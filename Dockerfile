@@ -11,6 +11,7 @@ RUN echo 'root:root' | chpasswd
 RUN chsh -s $(which fish)
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
+RUN /etc/init.d/ssh start
 
 EXPOSE 22 80 8000 8080
 
