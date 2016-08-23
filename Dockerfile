@@ -1,6 +1,7 @@
-FROM million12/php-app-ssh
+FROM webdevops/php-nginx:ubuntu-16.04
 
 RUN apt update
+RUN apt install -y openssh-server
 RUN apt install -y vim git wget curl tmux fish
 RUN git config --global user.email "admin@comicdatabase.com"
 RUN git config --global user.name "Comic DataBase"
