@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:ubuntu-16.04
+OM webdevops/php-nginx:ubuntu-16.04
 
 RUN apt update
 RUN apt install -y openssh-server
