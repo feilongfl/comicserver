@@ -9,6 +9,8 @@ RUN apt install -y php-curl
 ADD info.php /app
 ADD index.php /app
 ADD run.fish /app
+ADD downlist.txt /app
+ADD txc.fish /app
 RUN git clone https://github.com/ComicDatabase/ComicDatabase.git
 RUN mv ComicDatabase /app/comic
 RUN echo 'root:root' | chpasswd
