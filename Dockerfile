@@ -7,6 +7,10 @@ RUN git config --global user.email "admin@comicdatabase.com"
 RUN git config --global user.name "Comic DataBase"
 RUN apt install -y php-curl
 ADD info.php /app
+ADD index.php /app
+ADD run.fish /app
+RUN git clone https://github.com/ComicDatabase/ComicDatabase.git
+RUN mv ComicDatabase /app/comic
 RUN echo 'root:root' | chpasswd
 RUN chsh -s $(which fish)
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
