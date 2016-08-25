@@ -38,7 +38,7 @@ if ($mid != '' && $cid != '') {
         preg_match_all("/.{40}/i", $html, $pid);
         //print_r($pid);
         foreach ($pid[0] as $p) {
-            echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
+            echo '<img width="100%" src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
         }
     } else {
         print "comic not found.";
