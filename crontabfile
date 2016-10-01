@@ -1,0 +1,1 @@
+0 23 * * *  python /code/run.py cron >> /var/log/cron.log 2>&1

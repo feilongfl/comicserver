@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+
+for l in (cat downtxlist.txt);echo $l;set txmid (echo $l | sed -r 's/(.*)\t(.*)/\1/');echo $txmid;set txcid (echo $l | sed -r 's/(.*)\t(.*)/\2/');echo $txcid;fish ./tx2bd.fish $txmid $txcid;sed -i "1d" downtxlist.txt;end
+
