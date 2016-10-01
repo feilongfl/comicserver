@@ -32,4 +32,4 @@ RUN touch /var/log/cron.log
 
 EXPOSE 22 80 8000 8080
 
-CMD ["/usr/bin/fish","run.fish"]
+CMD ["/usr/bin/fish","/app/run.fish"]
